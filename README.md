@@ -3,8 +3,9 @@
 An end-to-end machine learning project that detects fraudulent credit card transactions on a highly imbalanced dataset (only **0.17%** of transactions are fraud), compares multiple models, and serves the best one through an interactive **Streamlit** app.
 
 **🔗 Live demo:** [your-app-name.streamlit.app](https://your-app-name.streamlit.app)
+**demo app preview**
+<img width="1514" height="750" alt="image" src="https://github.com/user-attachments/assets/ae6cb08b-13a7-4f0b-8845-4f02bf2e75af" />
 
-![App screenshot](assets/app_screenshot.png)
 
 ---
 
@@ -19,9 +20,6 @@ Banks lose billions every year to card fraud, but fraud is rare: in this dataset
 - **Features:** `V1–V28` (PCA-transformed, anonymized), `Time`, `Amount`
 - **Target:** `Class` (0 = legitimate, 1 = fraud)
 - **Class balance:** 99.83% legitimate / 0.17% fraud
-
-> The raw `creditcard.csv` (~150 MB) is not included in this repo. Download it from the Kaggle link above and place it in a `data/` folder to rerun the notebook.
-
 ## 🛠️ Approach
 
 1. **EDA:** confirmed the extreme class imbalance, inspected the `Amount` distribution, and verified there are no missing values.
@@ -33,20 +31,6 @@ Banks lose billions every year to card fraud, but fraud is rare: in this dataset
    - **Class weighting** via XGBoost's `scale_pos_weight`.
 6. **Evaluation:** Precision, Recall, F1, ROC-AUC, and PR-AUC. Accuracy is deliberately not used for model selection.
 7. **Deployment:** the best model is saved with `joblib` and served through Streamlit with an adjustable decision threshold.
-
-## 📈 Results
-
-Evaluated on the held-out, stratified test set (56,962 transactions, ~98 frauds).
-
-| Model | Precision | Recall | F1 | ROC-AUC | PR-AUC |
-|---|---|---|---|---|---|
-| Logistic Regression (raw) | 0.xx | 0.xx | 0.xx | 0.xx | 0.xx |
-| Random Forest (raw) | 0.xx | 0.xx | 0.xx | 0.xx | 0.xx |
-| Random Forest + SMOTE | 0.xx | 0.xx | 0.xx | 0.xx | 0.xx |
-| XGBoost + SMOTE | 0.xx | 0.xx | 0.xx | 0.xx | 0.xx |
-| XGBoost + class weights | 0.xx | 0.xx | 0.xx | 0.xx | 0.xx |
-
-> 🔧 *Replace the `0.xx` values with the numbers from your own results table.*
 
 ### Key takeaways
 
@@ -93,8 +77,6 @@ fraud-detection/
 ├── sample_transactions.csv     # Demo transactions for the app
 ├── notebooks/
 │   └── fraud_detection.ipynb   # EDA, modelling, evaluation
-├── assets/
-│   └── app_screenshot.png
 ├── requirements.txt
 └── README.md
 ```
@@ -112,8 +94,8 @@ Python · pandas · NumPy · scikit-learn · XGBoost · imbalanced-learn · Matp
 
 ## 👤 Author
 
-**Your Name**
-[LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
+**ESHITA JAIN**
+· [GitHub](https://github.com/jaineshita8-eng)
 
 ## 📄 License
 
