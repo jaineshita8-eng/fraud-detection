@@ -37,7 +37,7 @@ Banks lose billions every year to card fraud, but fraud is rare: in this dataset
 - **Accuracy was ~99.9% for every model**, including ones that missed a large share of fraud, so it is useless for comparing them.
 - **Recall vs. precision is a business trade-off:** a missed fraud costs money, while a false alarm annoys a customer. The app's threshold slider lets you explore this trade-off directly.
 - **PR-AUC is more informative than ROC-AUC** here, because ROC-AUC can look excellent even when precision is mediocre on rare-event data.
-- *(Add your own finding here, e.g. which model won and by how much.)*
+
 
 ## 🚀 Run it locally
 
